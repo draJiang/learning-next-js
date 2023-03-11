@@ -2,6 +2,13 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+
+
+  const res = fetch('https://app.heptabase.com/api/whiteboard/?secret=d4cc3728297609add1a00aab108e90c4e57a1c378cfc2307c251745bf7d2a884').then((response)=> response.json()).then((data)=>{
+    console.log(data)
+  })
+  // const posts =  res.json()
+
   return (
     <div className={styles.container}>
       <Head>
